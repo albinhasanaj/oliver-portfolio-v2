@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Aldrich&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Monda:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chathura:wght@100;300;400;700;800&display=swap');
+
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* globals.css */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  background-color: #121212;
+  color: #ffffff;
+  cursor: none;
+}
+
+/* Slider Container */
+.custom-slider {
+  appearance: none;
+  width: 600px;
+  height: 12px;
+  background: linear-gradient(90deg, #5F5F5F 0%, #13141A);
+  border-radius: 6px;
+  /* This makes the bar rounded */
+  outline: none;
+  opacity: 0.7;
+  transition: opacity .2s;
+}
+
+.custom-slider:hover {
+  opacity: 1;
+}
+
+/* Slider Thumb (Knob) */
+.custom-slider::-webkit-slider-thumb {
+  appearance: none;
+  width: 50px;
+  height: 50px;
+  background: #787878;
+  cursor: pointer;
+  border-radius: 10px;
+  border: 1px solid #ffffff;
+  cursor: none;
+  /* This makes the knob rounded */
+}
+
+.custom-slider::-moz-range-thumb {
+  width: 50px;
+  height: 50px;
+  background: #787878;
+  cursor: pointer;
+  border-radius: 10px;
+  /* This makes the knob rounded */
+}
+
+
+
+.background-layer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  /* Ensure it stays behind other content */
+  background: #121212;
+  /* Background color to adjust brightness */
+}
+
+
+
+@media screen and (max-width: 1280px) {
+  .custom-slider {
+    width: 480px;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .custom-slider {
+    width: 320px;
+  }
+}
+
+@media screen and (max-width: 639px) {
+  .custom-slider {
+    display: none;
+  }
+}
